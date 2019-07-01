@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5c7164f-04fc-4870-b989-b78b40fa4eff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/models/loginModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/loginModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/loginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/loginForm.php" afterDir="false" />
-    </list>
+    <list default="true" id="b5c7164f-04fc-4870-b989-b78b40fa4eff" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,8 +90,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/loginForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="408">
+              <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -222,7 +219,7 @@
       <workItem from="1561708349777" duration="21717000" />
       <workItem from="1561805809269" duration="1148000" />
       <workItem from="1561964031603" duration="22120000" />
-      <workItem from="1561988453103" duration="4346000" />
+      <workItem from="1561988453103" duration="5329000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <created>1561663840948</created>
@@ -263,7 +260,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93132000" />
+    <option name="totallyTimeSpent" value="94115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -460,8 +457,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/loginForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="408">
+          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
         </state>
       </provider>
     </entry>
