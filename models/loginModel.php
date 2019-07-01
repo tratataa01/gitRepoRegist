@@ -9,7 +9,7 @@ class loginModel
 
         $conn = new PDO ('mysql:host=localhost;dbname=registration', 'root', '');
 
-            $sql = "SELECT id, login, pass FROM registeruserdb WHERE login=:login";
+            $sql = "SELECT id, login, pass, email FROM registeruserdb WHERE login=:login";
             $query = $conn->prepare($sql);
             $query->execute([
                 ':login' => $postMassLog['login']
@@ -17,10 +17,11 @@ class loginModel
             $resultDB = $query->fetch(PDO::FETCH_ASSOC);
         if (password_verify($postMassLog['pass'], $resultDB['pass'])) {
             var_dump($resultDB);
-            echo "Авторизация успешна";
+            $_SESSION['done'] = 'Регистрация успешна';
+
 
         } else {
-            echo 'fail';
+            $_SESSION['err'] = 'Ошибка входа';
         }
         }
 }
