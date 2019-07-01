@@ -1,27 +1,27 @@
 <?php
-
+session_start();
 
 class loginModel
 {
     public function loginUserModel($postMassLog)
     {
-        session_start();
+
 
         $conn = new PDO ('mysql:host=localhost;dbname=registration', 'root', '');
 
-            $sql = "SELECT id, login, pass, email FROM registeruserdb WHERE login=:login";
+            $sql = "SELECT id, login, pass FROM registeruserdb WHERE login=:login";
             $query = $conn->prepare($sql);
             $query->execute([
                 ':login' => $postMassLog['login']
             ]);
             $resultDB = $query->fetch(PDO::FETCH_ASSOC);
         if (password_verify($postMassLog['pass'], $resultDB['pass'])) {
-            var_dump($resultDB);
-            $_SESSION['done'] = 'Регистрация успешна';
-
+            $_SESSION["doneLog"] = "Авторизация успешна";
+            header("Refresh:0 ; http://regist/loginForm");
 
         } else {
-            $_SESSION['err'] = 'Ошибка входа';
+            $_SESSION["errLog"] = "Ошибка авторизации";
+            header("Refresh:0 ; http://regist/loginForm");
         }
         }
 }

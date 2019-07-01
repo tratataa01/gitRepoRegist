@@ -34,7 +34,7 @@ class registrationModel
                     $_SESSION["err"] = "Ошибка регистрации";
                 }
 
-                header("Refresh:0 ; http://register/registration");
+                header("Refresh:0 ; http://regist/registration");
 
             } else {
                 $_SESSION["err"] = "Ошибка регистрации. Такой логин или почта уже существует";
@@ -42,7 +42,7 @@ class registrationModel
             }
         } else {
         $_SESSION["err"] = "E-mail адрес указан неверно.";
-        header("Refresh:0 ; http://register/registration");
+        header("Refresh:0 ; http://regist/registration");
 }
 
     }

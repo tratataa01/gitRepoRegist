@@ -4,10 +4,10 @@
 <form action="loginUserForm" method="post">
 <!--   --><?php //echo($data); ?>
    <h4>Авторизация</h4>
-    <?php if(isset($_SESSION["done"])){ ?><div class="alert alert-success" role="alert"> <?php echo $_SESSION["done"]; ?> </div><?php }?>
-    <?php if(isset($_SESSION["err"])){ ?><div class="alert alert-danger" role="alert"> <?php echo $_SESSION["err"]; ?> </div><?php }
-    unset($_SESSION['done']);
-    unset($_SESSION['err']); ?>
+    <?php if(isset($_SESSION["doneLog"])){ ?><div class="alert alert-success" role="alert"> <?php echo $_SESSION["doneLog"]; ?> </div><?php }?>
+    <?php if(isset($_SESSION["errLog"])){ ?><div class="alert alert-danger" role="alert"> <?php echo $_SESSION["errLog"]; ?> </div><?php }
+    unset($_SESSION['doneLog']);
+    unset($_SESSION['errLog']); ?>
     <input type="text" name="login" class="form-control" placeholder="login" required>
     </br>
     <input type="text" name="pass" class="form-control" placeholder="pass" required>
