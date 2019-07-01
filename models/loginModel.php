@@ -16,6 +16,7 @@ class loginModel
             ]);
             $resultDB = $query->fetch(PDO::FETCH_ASSOC);
         if (password_verify($postMassLog['pass'], $resultDB['pass'])) {
+            $_SESSION["UserID"] = "UserID -" . $resultDB['id'];
             $_SESSION["doneLog"] = "Авторизация успешна";
             header("Refresh:0 ; http://regist/loginForm");
 
