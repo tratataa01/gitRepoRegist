@@ -17,6 +17,7 @@ class Login extends Controller {
 
         $postMassLog = ['login'=> $_POST['login'], 'pass'=>$_POST['pass']];
         $conn = new PDO ('mysql:host=localhost;dbname=registration', 'root', '');
-        $this->loginModel->loginUserModel($postMassLog,$conn);
+        $headerLinkLogin = header("Refresh:0 ; /loginForm");
+        $this->loginModel->loginUserModel($postMassLog,$conn,$headerLinkLogin);
     }
 }

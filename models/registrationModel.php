@@ -4,7 +4,7 @@ session_start();
 class registrationModel
 {
 
-    public function addUserPublic($userData,$conn)
+    public function addUserPublic($userData,$conn,$headerLinkrRegist)
     {
         if (filter_var($userData['email'], FILTER_VALIDATE_EMAIL)) {
 
@@ -32,19 +32,16 @@ class registrationModel
                 } else {
                     $_SESSION["err"] = "Ошибка регистрации";
                 }
-
-                header("Refresh:0 ; /registration");
+                $headerLinkrRegist;
 
             } else {
-
                 $_SESSION["err"] = "Ошибка регистрации. Такой логин или почта уже существует";
-                header("Refresh:0 ; /registration");
+                $headerLinkrRegist;
             }
         } else {
-        $_SESSION["err"] = "E-mail адрес указан неверно.";
-        header("Refresh:0 ; /registration");
+            $_SESSION["err"] = "E-mail адрес указан неверно.";
+            $headerLinkrRegist;
         }
-
     }
 }
 

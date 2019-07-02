@@ -3,7 +3,7 @@ session_start();
 
 class loginModel
 {
-    public function loginUserModel($postMassLog,$conn)
+    public function loginUserModel($postMassLog,$conn,$headerLinkLogin)
     {
 
 
@@ -16,11 +16,11 @@ class loginModel
         if (password_verify($postMassLog['pass'], $resultDB['pass'])) {
             $_SESSION["UserID"] = $resultDB['id'];
             $_SESSION["doneLog"] = "Авторизация успешна";
-                 header("Refresh:0 ; /loginForm");
+                $headerLinkLogin;
 
         } else {
             $_SESSION["errLog"] = "Ошибка авторизации";
-                header("Refresh:0 ; /loginForm");
+                 $headerLinkLogin;
         }
     }
 }
