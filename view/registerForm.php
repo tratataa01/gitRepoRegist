@@ -3,12 +3,12 @@
         <form action="register_user" method="post">
         <?php echo($data); ?>
              <h4>Регистрация</h4>
-        <?php
+             <?php
             if(isset($_SESSION["done"])){ ?>
                 <div class="alert alert-success" role="alert">
                 <?php echo $_SESSION["done"]; ?>
                 </div><?php }?>
-        <?php
+         <?php
             if(isset($_SESSION["err"])){ ?>
                 <div class="alert alert-danger" role="alert">
                 <?php echo $_SESSION["err"]; ?>

@@ -13,17 +13,14 @@
             <div class="alert alert-danger" role="alert">
                 <?php echo $_SESSION["errLog"]; ?>
             </div>
-        <?php }
-        echo $_SESSION["UserID"];
-    "</br>";
-        unset($_SESSION['doneLog']);
-        unset($_SESSION['errLog']); ?>
-    </br>
-         <input type="text" name="login" class="form-control" placeholder="login" required>
-    </br>
-         <input type="text" name="pass" class="form-control" placeholder="pass" required>
-    </br>
-         <button class="btn btn-lg btn-primary btn-block" type="sumit">Войти</button>
-         <a href="registration" class="btn btn-lg btn-primary btn-block" type="sumit">Регистрация</a>
+            <?php }
+             echo $_SESSION["UserID"];"</br>";
+             unset($_SESSION['doneLog']);
+             unset($_SESSION['errLog']); ?>
+
+            </br><input type="text" name="login" class="form-control" placeholder="login" required>
+            </br><input type="text" name="pass" class="form-control" placeholder="pass" required>
+            </br> <button class="btn btn-lg btn-primary btn-block" type="sumit">Войти</button>
+            <a href="registration" class="btn btn-lg btn-primary btn-block" type="sumit">Регистрация</a>
         </form>
-    </div>
+</div>

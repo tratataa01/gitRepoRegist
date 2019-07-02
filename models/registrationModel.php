@@ -4,10 +4,10 @@ session_start();
 class registrationModel
 {
 
-    public function addUserPublic($userData)
+    public function addUserPublic($userData,$conn)
     {
         if (filter_var($userData['email'], FILTER_VALIDATE_EMAIL)) {
-            $conn = new PDO ('mysql:host=localhost;dbname=registration', 'root', '');
+
             $sql = "SELECT login,email FROM registeruserdb WHERE login=:login OR email=:email";
             $query = $conn->prepare($sql);
             $query->execute([
@@ -19,8 +19,7 @@ class registrationModel
 
             if (empty($resultDB)) {
                 $hash = password_hash($userData['pass'], PASSWORD_DEFAULT);
-                $db_connection = new PDO('mysql:host=localhost;dbname=registration', 'root', '');
-                $prepare_to_db = $db_connection->prepare('insert into registeruserdb (login, pass, email, city) VALUES (:login,:pass,:email,:city)');
+                $prepare_to_db = $conn->prepare('insert into registeruserdb (login, pass, email, city) VALUES (:login,:pass,:email,:city)');
                 $var = $prepare_to_db->execute([
                     ':login' => $userData['login'],
                     ':pass' => $hash,
@@ -34,16 +33,17 @@ class registrationModel
                     $_SESSION["err"] = "Ошибка регистрации";
                 }
 
-                header("Refresh:0 ; http://regist/registration");
+                header("Refresh:0 ; /registration");
 
             } else {
+
                 $_SESSION["err"] = "Ошибка регистрации. Такой логин или почта уже существует";
-                header("Refresh:0 ; http://register/registration");
+                header("Refresh:0 ; /registration");
             }
         } else {
         $_SESSION["err"] = "E-mail адрес указан неверно.";
-        header("Refresh:0 ; http://regist/registration");
-}
+        header("Refresh:0 ; /registration");
+        }
 
     }
 }

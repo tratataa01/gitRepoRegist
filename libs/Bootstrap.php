@@ -16,11 +16,6 @@ class Bootstrap  {
                 "MethodName" => "test",
                 "namespace" => 'controllers/help.php'
             ],
-            '/help/qweqweqwe' => [
-                "ClassName" => "Help",
-                "MethodName" => "qwe",
-                "namespace" => 'controllers/help.php'
-            ],
             '/registration' => [
                 "ClassName" => "Registration",
                 "MethodName" => "showRegForm",
@@ -62,4 +57,3 @@ class Bootstrap  {
 
     }
 }
-?>

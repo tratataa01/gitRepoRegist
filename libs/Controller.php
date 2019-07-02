@@ -1,13 +1,12 @@
 <?php
 
-require_once ('view.php'); //TODO use
+require_once ('view.php');
 
-class Controller
+    class Controller
 {
-    public $view;
-    public function __construct()
+        public $view;
+            public function __construct()
     {
         $this->view = new View();
-
     }
 }
