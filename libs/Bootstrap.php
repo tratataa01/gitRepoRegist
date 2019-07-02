@@ -8,13 +8,7 @@ class Bootstrap  {
             '/' => [
                 "ClassName" => "Index",
                 "MethodName" => "Start",
-                "namespace" => 'controllers/index.php'
-            ],
-
-            "/help" => [
-                "ClassName" => "Help",
-                "MethodName" => "test",
-                "namespace" => 'controllers/help.php'
+                "namespace" => 'controllers/Index.php'
             ],
             '/registration' => [
                 "ClassName" => "Registration",

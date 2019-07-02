@@ -2,7 +2,6 @@
 
 require_once ("models/registrationModel.php");
 
-
 class Registration extends Controller {
 
         public $registrationModel;
@@ -12,8 +11,7 @@ class Registration extends Controller {
         parent::__construct();
             $this->registrationModel = new registrationModel ();
     }
-         public function showRegForm(){
-
+        public function showRegForm(){
             $this->view->generate('registerForm.php','template_view.php');
     }
         public function createUsers(){

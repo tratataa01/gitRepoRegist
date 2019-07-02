@@ -28,18 +28,18 @@ class registrationModel
                 ]);
 
                 if (is_bool($var) === true) {
-                    $_SESSION["done"] = "Регистрация успешна";
+                    $_SESSION["done"] = "Registration successful";
                 } else {
-                    $_SESSION["err"] = "Ошибка регистрации";
+                    $_SESSION["err"] = "Registration error";
                 }
                 $headerLinkrRegist;
 
             } else {
-                $_SESSION["err"] = "Ошибка регистрации. Такой логин или почта уже существует";
+                $_SESSION["err"] = "Registration error. This login or email already exists";
                 $headerLinkrRegist;
             }
         } else {
-            $_SESSION["err"] = "E-mail адрес указан неверно.";
+            $_SESSION["err"] = "E-mail address is incorrect";
             $headerLinkrRegist;
         }
     }

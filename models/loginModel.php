@@ -15,7 +15,7 @@ class loginModel
 
         if (password_verify($postMassLog['pass'], $resultDB['pass'])) {
             $_SESSION["UserID"] = $resultDB['id'];
-            $_SESSION["doneLog"] = "Авторизация успешна";
+            $_SESSION["doneLog"] = "Login successful";
                 $headerLinkLogin;
 
         } else {

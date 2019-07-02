@@ -1,7 +1,8 @@
 <?php
 class Index extends Controller {
 
-    public  function Start(){
+    public  function Start()
+    {
 
     }
 }
