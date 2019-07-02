@@ -6,6 +6,5 @@ class Help extends Controller {
         parent::__construct();
         echo "Мы в контроллере HELP";
     }
-
 }
 

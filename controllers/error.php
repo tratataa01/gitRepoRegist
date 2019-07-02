@@ -5,6 +5,5 @@ class Error extends Controller {
 
         parent::__construct();
         echo "Контроллер обработки ошибок";
-
     }
 }
