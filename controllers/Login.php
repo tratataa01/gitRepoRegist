@@ -15,7 +15,7 @@ class Login extends Controller {
     public function loginUserForm()
     {
 
-        $this->view->generate('loginForm.php','template_view.php');
+        $this->view->generate('LoginForm.php','TemplateView.php');
     }
      public function loginDb()
      {

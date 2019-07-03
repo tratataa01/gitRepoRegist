@@ -6,6 +6,6 @@ class Index extends Controller {
 
     public  function Start()
     {
-        $this->view->generate('StartPage.php','template_view.php');
+        $this->view->generate('StartPage.php','TemplateView.php');
     }
 }

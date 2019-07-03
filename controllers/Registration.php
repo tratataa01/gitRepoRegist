@@ -15,7 +15,7 @@ class Registration extends Controller {
             $this->registrationModel = new registrationModel ();
     }
         public function showRegForm(){
-            $this->view->generate('registerForm.php','template_view.php');
+            $this->view->generate('RegisterForm.php','TemplateView.php');
     }
         public function createUsers(){
             $postMass = ['login'=> $_POST['login'], 'pass'=>$_POST['pass'],'email'=>$_POST['email'],'city'=>$_POST['city']];
