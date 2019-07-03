@@ -6,7 +6,6 @@ session_start();
 
 class registrationModel
 {
-
     public function addUserPublic($userData,$conn,$headerLinkrRegist)
     {
         if (filter_var($userData['email'], FILTER_VALIDATE_EMAIL)) {

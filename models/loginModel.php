@@ -9,7 +9,6 @@ class loginModel
 {
     public function loginUserModel($postMassLog,$conn,$headerLinkLogin)
     {
-
             $sql = "SELECT id, login, pass FROM registeruserdb WHERE login=:login";
             $query = $conn->prepare($sql);
             $query->execute([
