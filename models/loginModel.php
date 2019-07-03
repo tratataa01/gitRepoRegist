@@ -1,7 +1,10 @@
 <?php
+
 namespace models;
 use PDO;
+
 session_start();
+
 class loginModel
 {
     public function loginUserModel($postMassLog,$conn,$headerLinkLogin)

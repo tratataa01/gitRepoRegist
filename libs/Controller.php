@@ -1,6 +1,8 @@
 <?php
+
 namespace libs;
 use libs\View;
+
     class Controller
 {
         public $view;
