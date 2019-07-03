@@ -1,8 +1,8 @@
-<title>Регистрация</title>
+<title>Registration</title>
     <div class="container">
         <form action="register_user" method="post">
         <?php echo($data); ?>
-             <h4>Регистрация</h4>
+             <h4>Registration</h4>
              <?php
             if(isset($_SESSION["done"])){ ?>
                 <div class="alert alert-success" role="alert">
@@ -19,8 +19,8 @@
             <input type="text" name="pass" class="form-control" placeholder="pass" required> </br>
             <input type="text" name="email" class="form-control" placeholder="email" required></br>
             <input type="text" name="city" class="form-control" placeholder="city" required></br>
-            <button class="btn btn-lg btn-primary btn-block" type="sumit">Регистрация</button>
-            <a href="loginForm" class="btn btn-lg btn-primary btn-block" type="sumit">Авторизация</a>
+            <button class="btn btn-lg btn-primary btn-block" type="sumit">Registration</button>
+            <a href="loginForm" class="btn btn-lg btn-primary btn-block" type="sumit">Authorization</a>
         </form>
 </div>
 

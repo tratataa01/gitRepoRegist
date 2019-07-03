@@ -1,6 +1,7 @@
 <?php
+namespace models;
+use PDO;
 session_start();
-
 class loginModel
 {
     public function loginUserModel($postMassLog,$conn,$headerLinkLogin)
@@ -19,11 +20,10 @@ class loginModel
                 $headerLinkLogin;
 
         } else {
-            $_SESSION["errLog"] = "Ошибка авторизации";
+            $_SESSION["errLog"] = "Authorisation Error";
                  $headerLinkLogin;
         }
     }
 }
-
 
 

@@ -1,4 +1,6 @@
 <?php
+namespace libs;
+
 class Bootstrap  {
     public function __construct()
     {
@@ -6,47 +8,38 @@ class Bootstrap  {
 
         $router = [
             '/' => [
-                "ClassName" => "Index",
+                "ClassName" => "controllers\\Index",
                 "MethodName" => "Start",
                 "namespace" => 'controllers/Index.php'
             ],
             '/registration' => [
-                "ClassName" => "Registration",
+                "ClassName" => "controllers\\Registration",
                 "MethodName" => "showRegForm",
                 "namespace" => 'controllers/Registration.php'
             ],
             '/register_user' => [
-                "ClassName" => "Registration",
+                "ClassName" => "controllers\\Registration",
                 "MethodName" => "createUsers",
                 "namespace" => 'controllers/Registration.php'
             ],
             '/loginForm' => [
-                "ClassName" => "login",
+                "ClassName" => "controllers\\login",
                 "MethodName" => "loginUserForm",
                 "namespace" => 'controllers/Login.php'
             ],
             '/loginUserForm' => [
-                "ClassName" => "login",
+                "ClassName" => "controllers\\login",
                 "MethodName" => "loginDb",
                 "namespace" => 'controllers/Login.php'
             ],
         ];
 
         if (isset($router[$url])){
-            $file = $router[$url]["namespace"];
-            if(file_exists($file)) {
-                require $file;
-            } else {
-                require 'controllers/Error.php';
-                $controller = new Error();
-                return false;
-            }
             $controller = new $router[$url]["ClassName"];
             $controller->{$router[$url]["MethodName"]}();
-
         }else {
-            header("HTTP/1.0 404 Not Found");
-            exit;
+             header("HTTP/1.0 404 Not Found");
+             exit;
         }
     }
 }

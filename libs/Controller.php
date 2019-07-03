@@ -1,7 +1,6 @@
 <?php
-
-require_once ('view.php');
-
+namespace libs;
+use libs\View;
     class Controller
 {
         public $view;

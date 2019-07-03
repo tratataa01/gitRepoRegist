@@ -9,6 +9,6 @@
          <link rel="stylesheet" href="style.css">
     </head>
      <body>
-        <?php include 'view/'. $content_view; ?>
+        <?php include 'View/'. $content_view; ?>
      </body>
 </html>

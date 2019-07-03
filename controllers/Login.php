@@ -1,7 +1,9 @@
 <?php
 
-require_once ("models/loginModel.php");
-
+namespace controllers;
+use models\loginModel;
+use libs\Controller;
+use PDO;
 class Login extends Controller {
      public $loginModel;
      public function __construct()

@@ -1,7 +1,7 @@
-<title>Авторизация</title>
+<title>Authorization</title>
     <div class="container">
         <form action="loginUserForm" method="post">
-            <h4>Авторизация</h4>
+            <h4>Authorization</h4>
     <?php
         if(isset($_SESSION["doneLog"])){ ?>
             <div class="alert alert-success" role="alert">
@@ -20,7 +20,7 @@
 
             </br><input type="text" name="login" class="form-control" placeholder="login" required>
             </br><input type="text" name="pass" class="form-control" placeholder="pass" required>
-            </br> <button class="btn btn-lg btn-primary btn-block" type="sumit">Войти</button>
-            <a href="registration" class="btn btn-lg btn-primary btn-block" type="sumit">Регистрация</a>
+            </br> <button class="btn btn-lg btn-primary btn-block" type="sumit">Login to account</button>
+            <a href="registration" class="btn btn-lg btn-primary btn-block" type="sumit">Registration</a>
         </form>
 </div>

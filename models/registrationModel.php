@@ -1,4 +1,7 @@
 <?php
+namespace models;
+use libs\Controller;
+use PDO;
 session_start();
 
 class registrationModel
