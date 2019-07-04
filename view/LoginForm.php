@@ -1,6 +1,6 @@
 <title>Authorization</title>
     <div class="container">
-        <form action="loginUserForm" method="post">
+        <form action="loginUserForm" method="post"><br>
             <h4>Authorization</h4>
             <?php
         if(isset($_SESSION["doneLog"])){ ?>
@@ -18,7 +18,6 @@
 
             </br><input type="text" name="login" class="form-control" placeholder="login" required>
             </br><input type="text" name="pass" class="form-control" placeholder="pass" required>
-            </br> <button class="btn btn-lg btn-primary btn-block" type="sumit">Login to account</button>
-            <a href="registration" class="btn btn-lg btn-primary btn-block" type="sumit">Registration</a>
+            </br> <button class="btn btn-info" type="sumit">Login to account</button>
         </form>
 </div>

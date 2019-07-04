@@ -13,6 +13,11 @@ class Bootstrap  {
                 "MethodName" => "Start",
                 "namespace" => 'controllers/Index.php'
             ],
+            '/AddNewComent' => [
+                "ClassName" => "controllers\\Index",
+                "MethodName" => "AddUserComent",
+                "namespace" => 'models/UserComentModel.php'
+            ],
             '/registration' => [
                 "ClassName" => "controllers\\Registration",
                 "MethodName" => "showRegForm",

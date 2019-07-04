@@ -1,8 +1,10 @@
 <title>Welcome</title>
-<div class="container">
-    <form action="loginUserForm" method="post">
-        <h4>Welcome</h4>
-        <a href="registration" class="btn btn-lg btn-primary btn-block" type="sumit">Registration</a>
-        <a href="registration" class="btn btn-lg btn-primary btn-block" type="sumit">Login in</a>
-    </form>
+<div class="container"><br><br>
+        <div class="form-group">
+            <form action="AddNewComent" method="post">
+            <label for="comment">Comment:</label>
+            <textarea name="coment" class="form-control" rows="5" id="comment"></textarea><br><br>
+            <button class="btn btn-primary " type="sumit">Send coment</button>
+        </div>
+
 </div>
