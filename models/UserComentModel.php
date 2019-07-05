@@ -14,6 +14,6 @@ class UserComentModel
             ':data_time' => $postComentLog['data_time'],
 
         ]);
-        var_dump($postComentLog);
+        $headerLinkLogin;
     }
 }

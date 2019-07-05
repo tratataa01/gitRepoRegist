@@ -42,7 +42,7 @@ class registrationModel
                 $headerLinkrRegist;
             }
         } else {
-            $_SESSION["err"] = "E-mail address is incorrect";
+            $_SESSION["err"] = "Login or E-mail address is incorrect";
             $headerLinkrRegist;
         }
     }
