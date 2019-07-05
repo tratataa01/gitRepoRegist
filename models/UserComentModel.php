@@ -12,7 +12,6 @@ class UserComentModel
             ':user_id' => $postComentLog['user_id'],
             ':coment' => $postComentLog['coment'],
             ':data_time' => $postComentLog['data_time'],
-
         ]);
         $headerLinkLogin;
     }

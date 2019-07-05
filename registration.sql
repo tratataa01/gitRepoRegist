@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 01 2019 г., 18:15
+-- Время создания: Июл 05 2019 г., 15:03
 -- Версия сервера: 5.6.41
 -- Версия PHP: 7.2.10
 
@@ -48,6 +48,19 @@ CREATE TABLE `register_db` (
   `pass` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `user_coments`
+--
+
+CREATE TABLE `user_coments` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `coment` text NOT NULL,
+  `data_time` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -65,6 +78,12 @@ ALTER TABLE `register_db`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `user_coments`
+--
+ALTER TABLE `user_coments`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -78,6 +97,12 @@ ALTER TABLE `registeruserdb`
 -- AUTO_INCREMENT для таблицы `register_db`
 --
 ALTER TABLE `register_db`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `user_coments`
+--
+ALTER TABLE `user_coments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 

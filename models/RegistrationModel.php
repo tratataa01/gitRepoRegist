@@ -19,7 +19,6 @@ class registrationModel
             ]);
 
             $resultDB = $query->fetch(PDO::FETCH_ASSOC);
-
             if (empty($resultDB)) {
                 $hash = password_hash($userData['pass'], PASSWORD_DEFAULT);
                 $prepare_to_db = $conn->prepare('insert into registeruserdb (login, pass, email, city) VALUES (:login,:pass,:email,:city)');
