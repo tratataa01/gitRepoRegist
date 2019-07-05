@@ -1,8 +1,8 @@
 <?php
 
 namespace libs;
-use libs\View;
 session_start();
+
     class Controller
 {
         public $view;

@@ -16,9 +16,9 @@
                 <div class="container mt-3">
                     <div class="media border p-3">
                         <div class="media-body">
-                            <h4>John Doe
-                                <small><i>Posted on <?php echo $product['data_time']?>;</i></small>
-                            </h4>
+                            <h5><?php echo $product['login']; ?>
+                                <small><i>Posted on<?php echo $product['data_time']?>;</i></small>
+                            </h5>
                             <p><?php echo $product['coment'];?></p>
                         </div>
                     </div>
@@ -27,10 +27,11 @@
 
 <title>Welcome</title>
 <div class="container"><br><br>
-        <div class="form-group">
-            <form action="AddNewComent" method="post">
+    <div class="form-group">
+        <form action="AddNewComent" method="post">
             <label for="comment">Comment:</label>
             <textarea name="coment" class="form-control" rows="5" id="comment"></textarea><br><br>
             <button class="btn btn-primary " type="sumit">Send coment</button><br>
-        </div>
+        <form/>
+    </div>
 </div>
