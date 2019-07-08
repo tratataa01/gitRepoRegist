@@ -14,6 +14,7 @@ class loginModel
             $query->execute([
                 ':login' => $postMassLog['login']
             ]);
+        $_SESSION["LoginUser"] = $postMassLog['login'];
             $resultDB = $query->fetch(PDO::FETCH_ASSOC);
 
         if (password_verify($postMassLog['pass'], $resultDB['pass'])) {

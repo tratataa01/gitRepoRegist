@@ -25,4 +25,9 @@ class Login extends Controller {
             $headerLinkLogin = header("Refresh:0 ; /loginForm");
             $this->loginModel->loginUserModel($postMassLog,$conn,$headerLinkLogin);
          }
+        public function loginOut()
+        {
+            unset($_SESSION['UserID']);
+            header("Refresh:0 ; /");
+        }
 }

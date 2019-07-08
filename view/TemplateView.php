@@ -34,7 +34,11 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="loginForm">Login</a>
-
+            <li class="nav-item">
+                <?php
+                if(isset($_SESSION["UserID"])){ ?>
+                    <a class="nav-link" href="loginOut">Log out</a>
+                <?php } ?>
             </li>
         </ul>
     </div>

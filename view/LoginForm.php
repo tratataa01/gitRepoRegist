@@ -12,7 +12,6 @@
             <div class="alert alert-danger" role="alert">
             <?php echo $_SESSION["errLog"]; ?>
             </div><?php }
-             echo $_SESSION["UserID"];"</br>";
              unset($_SESSION['doneLog']);
              unset($_SESSION['errLog']); ?>
 

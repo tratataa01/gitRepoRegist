@@ -38,8 +38,12 @@ class Bootstrap  {
                 "MethodName" => "loginDb",
                 "namespace" => 'controllers/Login.php'
             ],
+            '/loginOut' => [
+                "ClassName" => "controllers\\login",
+                "MethodName" => "loginOut",
+                "namespace" => 'controllers/Login.php'
+            ],
         ];
-
         if (isset($router[$url])){
             $controller = new $router[$url]["ClassName"];
             $controller->{$router[$url]["MethodName"]}();
