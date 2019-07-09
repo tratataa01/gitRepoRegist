@@ -25,7 +25,6 @@ class Index extends Controller {
             $this->view->generate('StartPage.php','TemplateView.php');
             $_SESSION["ComentDb"]= $resultDB;
 
-
         }
         public function AddUserComent()
         {
