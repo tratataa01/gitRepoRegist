@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5c7164f-04fc-4870-b989-b78b40fa4eff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/RegisterForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/RegisterForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/StartPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/StartPage.php" afterDir="false" />
-    </list>
+    <list default="true" id="b5c7164f-04fc-4870-b989-b78b40fa4eff" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +168,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="79" />
     <option name="y" value="-23" />
     <option name="width" value="1382" />
@@ -279,7 +275,7 @@
       <workItem from="1562569264075" duration="11047000" />
       <workItem from="1562655765512" duration="8979000" />
       <workItem from="1562667697250" duration="17204000" />
-      <workItem from="1562694423847" duration="7288000" />
+      <workItem from="1562694423847" duration="7338000" />
     </task>
     <task id="LOCAL-00001" summary="add login page">
       <created>1561663840948</created>
@@ -327,7 +323,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241615000" />
+    <option name="totallyTimeSpent" value="241665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />

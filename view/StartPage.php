@@ -23,7 +23,7 @@
                                 <button type="button" class="btn btn-primary btn-sm answerButton" data-id="<?php echo $value['id']?>">reply</button>
                             </h5>
                             <p><?php echo $value['coment'];?></p>
-       <?php}?>
+       <?php } ?>
 
 <?php                       foreach ($_SESSION['ComentDb'] as $valueTwo) {
 
