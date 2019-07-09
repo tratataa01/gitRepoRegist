@@ -2,8 +2,8 @@
 
 namespace libs;
 
-class AutoLoader
-{
+class AutoLoader {
+
     public function AutoLoad($className)
     {
         $classPath = str_replace('\\', DIRECTORY_SEPARATOR, $className);

@@ -5,8 +5,8 @@ use PDO;
 
 session_start();
 
-class loginModel
-{
+class loginModel {
+
     public function loginUserModel($postMassLog,$conn,$headerLinkLogin)
     {
             $sql = "SELECT id, login, pass FROM registeruserdb WHERE login=:login";

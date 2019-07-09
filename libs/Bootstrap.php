@@ -3,6 +3,7 @@
 namespace libs;
 
 class Bootstrap  {
+
     public function __construct()
     {
         $url = $_SERVER["REQUEST_URI"];

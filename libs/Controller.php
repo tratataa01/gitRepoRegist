@@ -3,8 +3,8 @@
 namespace libs;
 session_start();
 
-    class Controller
-{
+    class Controller {
+
         public $view;
             public function __construct()
     {

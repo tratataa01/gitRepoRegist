@@ -4,8 +4,7 @@ use libs\Controller;
 use PDO;
 session_start();
 
-class registrationModel
-{
+class registrationModel {
 
     public function addUserPublic($userData,$conn,$headerLinkrRegist)
     {
