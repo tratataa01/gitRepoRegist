@@ -1,7 +1,7 @@
 <?php
 
 namespace libs;
-session_start();
+
 
     class Controller {
 

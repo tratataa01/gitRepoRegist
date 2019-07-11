@@ -10,12 +10,12 @@ class Bootstrap  {
 
         $router = [
             '/' => [
-                "ClassName" => "controllers\\Index",
+                "ClassName" => "controllers\\StartPage",
                 "MethodName" => "Start",
-                "namespace" => 'controllers/Index.php'
+                "namespace" => 'controllers/StartPage.php.php'
             ],
             '/AddNewComent' => [
-                "ClassName" => "controllers\\Index",
+                "ClassName" => "controllers\\StartPage",
                 "MethodName" => "AddUserComent",
                 "namespace" => 'models/UserComentModel.php'
             ],
