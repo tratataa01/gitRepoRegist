@@ -17,7 +17,11 @@ class Registration extends Controller {
             $this->view->generate('RegisterForm.php','TemplateView.php');
     }
         public function createUsers(){
-            $headerLinkrRegist = header("Refresh:0 ; /registration");
-            $this->registrationModel->addUserPublic($headerLinkrRegist);
+
+            $userData = ['login'=> $_POST['login'], 'pass'=>$_POST['pass'],'email'=>$_POST['email'],'city'=>$_POST['city']];
+            $notif = $this->registrationModel->addUserPublic($userData);
+            $_SESSION["done"] = $notif['success'];
+            $_SESSION["err"] = $notif['err'];
+            header("Refresh:0 ; /registration");
     }
 }

@@ -9,7 +9,6 @@ class DataBase
     private $dbName;
     private $user;
     private $pass;
-    private $dbh;
     public $pdo;
 
         public function __construct ($hostCopy,$dbNameCopy,$userCopy,$passCopy)

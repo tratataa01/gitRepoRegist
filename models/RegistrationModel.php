@@ -1,6 +1,5 @@
 <?php
 namespace models;
-use libs\Controller;
 use PDO;
 
 class registrationModel {
@@ -10,9 +9,9 @@ class registrationModel {
         $this->addUserPublic = new DataBase(DB_HOST,DB_NAME,DB_USER,DB_PASS);
     }
 
-    public function addUserPublic($headerLinkrRegist)
+    public function addUserPublic($userData)
     {
-        $userData = ['login'=> $_POST['login'], 'pass'=>$_POST['pass'],'email'=>$_POST['email'],'city'=>$_POST['city']];
+
         if (filter_var($userData['email'], FILTER_VALIDATE_EMAIL)) {
 
             $sql = "SELECT login,email FROM registeruserdb WHERE login=:login OR email=:email";
@@ -34,21 +33,16 @@ class registrationModel {
                 ]);
 
                 if (is_bool($var) === true) {
-                    $_SESSION["done"] = "Registration successful";
+                   return ['success'=>'Registration successful'];
                 } else {
-                    $_SESSION["err"] = "Registration error";
+                    return ['err'=>"Registration error"];
                 }
-                $headerLinkrRegist;
+
             } else {
-                $_SESSION["err"] = "Registration error. This login or email already exists";
-                $headerLinkrRegist;
+                return ['err'=>"Registration error. This login or email already exists"];
             }
         } else {
-            $_SESSION["err"] = "Login or E-mail address is incorrect";
-            $headerLinkrRegist;
+            return ['err'=>"Login or E-mail address is incorrect"];
         }
     }
 }
-
-
-

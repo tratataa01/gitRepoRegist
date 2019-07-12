@@ -16,12 +16,15 @@ class StartPage extends Controller {
         }
         public  function Start()
         {
-            $this->UserComentModel->viewComents();
+            $comentDb = $this->UserComentModel->viewComents();
             $this->view->generate('StartPage.php','TemplateView.php');
+            $_SESSION["ComentDb"]= $comentDb;
         }
         public function AddUserComent()
         {
-            $headerLinkComent = header("Refresh:0 ; /");
-            $this->UserComentModel->addComent($headerLinkComent);
+            $example =  date("Y.m.d");
+            $postComentLog = ['user_id'=> $_SESSION["UserID"],'coment'=>$_POST['coment'],'data_time'=>$example,'coment_id'=>$_POST['comentid']];
+            header("Refresh:0 ; /");
+            $this->UserComentModel->addComent($postComentLog,$example);
         }
 }

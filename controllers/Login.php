@@ -19,8 +19,12 @@ class Login extends Controller {
          }
          public function loginDb()
          {
-             $headerLinkLogin = header("Refresh:0 ; /loginForm");
-            $this->loginModel->loginUserModel($headerLinkLogin);
+             $postMassLog = ['login'=> $_POST['login'], 'pass'=>$_POST['pass']];
+             $notif = $this->loginModel->loginUserModel($postMassLog);
+             $_SESSION["doneLog"] = $notif['success'];
+             $_SESSION["errLog"] = $notif['err'];
+             $_SESSION["UserID"] = $notif['UserID'];
+             header("Refresh:0 ; /loginForm");
          }
         public function loginOut()
         {

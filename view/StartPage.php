@@ -50,7 +50,6 @@
         <?php }
 
              if(isset($_SESSION["UserID"])){ ?>
-                <title>Welcome</title>
                 <div class="container">
                     <div class="form-group">
                         <form action="AddNewComent" method="post">

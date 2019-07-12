@@ -16,12 +16,10 @@ class UserComentModel {
         $query = $this->addUserPublic->pdo->prepare($sql);
         $query->execute();
         $resultDB = $query->fetchAll(PDO::FETCH_ASSOC);
-        $_SESSION["ComentDb"]= $resultDB;
+            return $resultDB;
     }
-    public function addComent($headerLinkLogin)
+    public function addComent($postComentLog)
     {
-        $example =  date("Y.m.d");
-        $postComentLog = ['user_id'=> $_SESSION["UserID"], 'coment'=>$_POST['coment'],'data_time'=>$example,'coment_id'=>$_POST['comentid']];
         $prepare_to_db = $this->addUserPublic->pdo->prepare('insert into user_coments (user_id, coment, data_time,coment_id) VALUES (:user_id,:coment,:data_time,:coment_id)');
         $var = $prepare_to_db->execute([
             ':user_id' => $postComentLog['user_id'],
@@ -29,6 +27,6 @@ class UserComentModel {
             ':data_time' => $postComentLog['data_time'],
             ':coment_id' =>$postComentLog['coment_id']
         ]);
-        $headerLinkLogin;
+
     }
 }
