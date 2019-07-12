@@ -17,8 +17,8 @@ class StartPage extends Controller {
         public  function Start()
         {
             $comentDb = $this->UserComentModel->viewComents();
-            $this->view->generate('StartPage.php','TemplateView.php');
-            $_SESSION["ComentDb"]= $comentDb;
+            $comentData= $comentDb;
+            $this->view->generate('StartPage.php','TemplateView.php',$comentData);
         }
         public function AddUserComent()
         {

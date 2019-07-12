@@ -11,7 +11,7 @@
         </head>
 <body>
 <?php
-            foreach($_SESSION['ComentDb'] as $value) {?>
+            foreach($comentData as $value) {?>
 
 <?php         if($value['coment_id'] == 0 ){?>
 
@@ -25,7 +25,7 @@
                             <p><?php echo $value['coment'];?></p>
        <?php } ?>
 
-<?php                       foreach ($_SESSION['ComentDb'] as $valueTwo) {
+<?php                       foreach ($comentData as $valueTwo) {
 
                                 if ($value['id'] == $valueTwo['coment_id']) { ?>
                                     <div class="container mt-3">

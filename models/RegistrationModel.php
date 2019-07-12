@@ -37,7 +37,7 @@ class registrationModel {
                 } else {
                     return ['err'=>"Registration error"];
                 }
-
+                
             } else {
                 return ['err'=>"Registration error. This login or email already exists"];
             }

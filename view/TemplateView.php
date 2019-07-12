@@ -31,14 +31,13 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="registration">Registration</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="loginForm">Login</a>
-            <li class="nav-item">
-                <?php
-                if(isset($_SESSION["UserID"])){ ?>
-                    <a class="nav-link" href="loginOut">Log out</a>
+                    <a class="nav-link" href="registration">Registration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="loginForm">Login</a>
+                <li class="nav-item">
+<?php               if(isset($_SESSION["UserID"])){ ?>
+                        <a class="nav-link" href="loginOut">Log out</a>
                 <?php } ?>
             </li>
         </ul>
@@ -55,6 +54,6 @@
         <link rel="stylesheet" href="../assets/style.css">
     </head>
      <body>
-     <?php include 'View/'. $content_view; ?>
+<?php           include 'View/'. $content_view ; ?>
      </body>
 </html>
