@@ -47,9 +47,16 @@
                 </div>
 
 </body>
-        <?php }
+        <?php } ?>
+        <?php $pageUp = $_GET['page'] + 1; $pageDown = $_GET['page'] - 1 ?>
+<ul class="pagination">
 
-             if(isset($_SESSION["UserID"])){ ?>
+    <li class="page-item"><a class="page-link" href="?page=<?php echo $pageDown ;?>"><-</a></li>
+  <li class="page-item active"><a class="page-link" href="?page=1"><?php echo $_GET['page']?></a></li>
+  <li class="page-item"><a class="page-link" href="?page=<?php echo $pageUp ;?>">-></a></li>
+</ul>
+
+           <?php  if(isset($_SESSION["UserID"])){ ?>
                 <div class="container">
                     <div class="form-group">
                         <form action="AddNewComent" method="post">
@@ -61,4 +68,7 @@
                     </div>
                 </div>
 <?php        }
+
+
+
 

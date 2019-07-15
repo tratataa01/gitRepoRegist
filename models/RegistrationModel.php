@@ -24,7 +24,8 @@ class registrationModel {
 
             if (empty($resultDB)) {
                 $hash = password_hash($userData['pass'], PASSWORD_DEFAULT);
-                $prepare_to_db = $this->addUserPublic->pdo->prepare('insert into registeruserdb (login, pass, email, city) VALUES (:login,:pass,:email,:city)');
+                $prepare_to_db = $this->addUserPublic->pdo->prepare
+                ('insert into registeruserdb (login, pass, email, city) VALUES (:login,:pass,:email,:city)');
                 $var = $prepare_to_db->execute([
                     ':login' => $userData['login'],
                     ':pass' => $hash,
@@ -37,7 +38,7 @@ class registrationModel {
                 } else {
                     return ['err'=>"Registration error"];
                 }
-                
+
             } else {
                 return ['err'=>"Registration error. This login or email already exists"];
             }

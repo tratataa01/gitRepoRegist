@@ -7,44 +7,38 @@ class Bootstrap  {
     public function __construct()
     {
         $url = $_SERVER["REQUEST_URI"];
-
+        $url = strtok($url, '?');
         $router = [
             '/' => [
                 "ClassName" => "controllers\\StartPage",
                 "MethodName" => "Start",
-                "namespace" => 'controllers/StartPage.php.php'
             ],
             '/AddNewComent' => [
                 "ClassName" => "controllers\\StartPage",
                 "MethodName" => "AddUserComent",
-                "namespace" => 'models/UserComentModel.php'
             ],
             '/registration' => [
                 "ClassName" => "controllers\\Registration",
                 "MethodName" => "showRegForm",
-                "namespace" => 'controllers/Registration.php'
             ],
             '/register_user' => [
                 "ClassName" => "controllers\\Registration",
                 "MethodName" => "createUsers",
-                "namespace" => 'controllers/Registration.php'
             ],
             '/loginForm' => [
                 "ClassName" => "controllers\\login",
                 "MethodName" => "loginUserForm",
-                "namespace" => 'controllers/Login.php'
             ],
             '/loginUserForm' => [
                 "ClassName" => "controllers\\login",
                 "MethodName" => "loginDb",
-                "namespace" => 'controllers/Login.php'
             ],
             '/loginOut' => [
                 "ClassName" => "controllers\\login",
                 "MethodName" => "loginOut",
-                "namespace" => 'controllers/Login.php'
             ],
         ];
+
         if (isset($router[$url])){
             $controller = new $router[$url]["ClassName"];
             $controller->{$router[$url]["MethodName"]}();

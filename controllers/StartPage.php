@@ -16,8 +16,13 @@ class StartPage extends Controller {
         }
         public  function Start()
         {
-            $comentDb = $this->UserComentModel->viewComents();
+            $count = 6 ;
+            $page = $_GET["page"];
+            $shift = $count * ($page - 1);
+            $comentDb = $this->UserComentModel->viewComents($shift,$count);
             $comentData= $comentDb;
+
+
             $this->view->generate('StartPage.php','TemplateView.php',$comentData);
         }
         public function AddUserComent()
